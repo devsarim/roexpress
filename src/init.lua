@@ -2,8 +2,8 @@
 local RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local t = require(ReplicatedStorage.packages.t)
-local Promise = require(ReplicatedStorage.packages.Promise)
+local t = require(script.Parent.t)
+local Promise = require(script.Parent.Promise)
 
 if (RunService:IsServer()) then
   local roexpressDir = Instance.new("Folder")
