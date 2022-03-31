@@ -1,45 +1,9 @@
 --!strict
-
---[[
-
-  @@ client
-
-    --> Signal from the server
-    roexpress.on("route", function(...)
-    
-    end)
-
-    --> Invocation to get data from server
-    roexpress.get("route", ...).then(function(data)
-    
-    end)
-
-    --> Signal the server
-    roexpress("route", ...)
-
-  @@ server
-
-    --> Callback to return data on signal from a client
-    roexpress.get("route", function(player, ...)
-      return something
-    end)
-
-    --> Signal from a client
-    roexpress.on("route", function(player, ...)
-      --> Do something
-    end)
-
-    --> Signal a client or all clients
-    roexpress("route", player?, ...) --> If the second argument is not a player, it is sent to all players
-
-    
-]]
-
 local RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local t = require(script.t)
-local Promise = require(script.Promise)
+local t = require(ReplicatedStorage.packages.t)
+local Promise = require(ReplicatedStorage.packages.Promise)
 
 if (RunService:IsServer()) then
   local roexpressDir = Instance.new("Folder")
