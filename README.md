@@ -9,7 +9,7 @@ Wally
 roexpress = sarimwastaken/roexpress@0.1.4
 ```
 
-## Client!
+## Client
 
 ```lua
   roexpress.on(route: string, callback: (...) -> nil): nil
