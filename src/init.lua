@@ -23,6 +23,8 @@ if (RunService:IsServer()) then
   
       for index, path in ipairs(routePath) do
         currentParent = currentParent:FindFirstChild(path)
+        if (not currentPath) then return end
+        
         if (currentParent:IsA("RemoteEvent") or currentParent:IsA("RemoteFunction")) then
           foundRoute = currentParent
         end
