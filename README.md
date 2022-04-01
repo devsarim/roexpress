@@ -6,7 +6,7 @@ A lightweight, easy-to-use networking module for Roblox, similar to express.
 ## Installation
 Wally
 ```
-roexpress = sarimwastaken/roexpress@0.1.4
+roexpress = "sarimwastaken/roexpress@0.1.5"
 ```
 
 ## Client
